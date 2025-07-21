@@ -1,5 +1,6 @@
 import React from 'react';
 import './StudentForm.css';
+import { Link } from 'react-router-dom';
 
 export const StudentForm = () => {
   return (
@@ -92,9 +93,9 @@ export const StudentForm = () => {
           <label className="student-label" htmlFor="photo">Upload Photo:</label>
           <input type="file" id="photo" className="student-input" accept="image/*" required />
 
-          <button type="submit" className="student-submit-btn">Register</button>
+          <button type="submit" className="student-submit-btn"><Link to="/homestudent">Register</Link></button>
           <p>
-            <a href="http://127.0.0.1:5500/login.html" className="student-link">Go to Login Page</a>
+            <Link to="/login" className="student-link">Go to Login Page</Link>
           </p>
         </form>
       </div>

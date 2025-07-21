@@ -1,16 +1,21 @@
 import React from 'react'
+import './NavbarStudent.css'
+import { Link } from 'react-router-dom'
+import code from './code.png';
 
 export const NavbarStudent = () => {
     return (
         <>
-            <nav>
-                <img src="./code-united-logo.png" />
-                <a href="HomeStudent.html">Home</a>
-                <a href="lecture.html">Lectures</a>
-                <a href="information.html">Education Fields</a>
-                <a href="industry.html">Industry</a>
-                <a href="profile.html">Profile</a>
-            </nav>
+            <section class="ns-body">
+                <nav className="ns-navbar">
+                    <img src={code} alt="Code United Logo" className="ns-logo" />
+                    <Link to="/homeStudent" className="ns-link">Home</Link>
+                    <Link to="/lecture" className="ns-link">Lectures</Link>
+                    <Link to="/information" className="ns-link">Education Fields</Link>
+                    <Link to="/industry" className="ns-link">Industry</Link>
+                    <Link to="/profile" className="ns-link">Profile</Link>
+                </nav>
+            </section>
         </>
     )
 }

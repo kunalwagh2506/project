@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './NavbarSample.css';
-import code from './code.png';
+import code from './code.png'; // Replace with your actual logo path
 import { Link } from 'react-router-dom';
 
 export const NavbarSample = () => {

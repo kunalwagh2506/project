@@ -1,32 +1,31 @@
-.Body {
+.prof-body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #f0f4f8;
     color: #333;
-    animation: bodyFadeIn 2s ease-in-out;
+    animation: prof-bodyFadeIn 2s ease-in-out;
 }
 
-@keyframes bodyFadeIn {
+@keyframes prof-bodyFadeIn {
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
 }
 
-.log-in{
-  text-align: right;
-  margin-left: 750px;
-  background-color: #2c3e50;
-  border-radius: 10px;
-  padding:8px;
+.prof-log-in {
+    text-align: right;
+    margin-left: 750px;
+    background-color: #2c3e50;
+    border-radius: 10px;
+    padding: 8px;
 }
 
 nav img {
-  height: 20px;
-  width: 50px;
+    height: 20px;
+    width: 50px;
 }
 
 nav {
@@ -35,24 +34,11 @@ nav {
     display: right;
     justify-content: space-around;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: slideDown 1s ease-in-out;
+    animation: prof-slideDown 1s ease-in-out;
 }
 
 nav a {
     margin: 20px;
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-    }
-
-    to {
-        transform: translateY(0);
-    }
-}
-
-nav a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
@@ -64,62 +50,66 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-header {
+@keyframes prof-slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.prof-header {
     background: linear-gradient(120deg, #00b4d8, #0077b6);
     padding: 2rem;
     color: white;
     text-align: center;
-    animation: fadeIn 1s ease-in;
+    animation: prof-fadeIn 1s ease-in;
 }
 
-@keyframes fadeIn {
+@keyframes prof-fadeIn {
     from {
         opacity: 0;
         transform: translateY(-20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-section {
+.prof-details {
     text-align: center;
     padding: 2rem;
     max-width: 600px;
-    margin: auto;
+    margin: 2rem auto 0;
     background: white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    animation: fadeUp 1s ease-in-out;
-    margin-top: 2rem;
+    animation: prof-fadeUp 1s ease-in-out;
 }
 
-@keyframes fadeUp {
+@keyframes prof-fadeUp {
     from {
         opacity: 0;
         transform: translateY(30px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-h1,
-h2 {
+h1, h2 {
     color: #0077b6;
-    animation: fadeInText 1s ease-in-out;
+    animation: prof-fadeInText 1s ease-in-out;
 }
 
-@keyframes fadeInText {
+@keyframes prof-fadeInText {
     from {
         opacity: 0;
         letter-spacing: -2px;
     }
-
     to {
         opacity: 1;
         letter-spacing: normal;

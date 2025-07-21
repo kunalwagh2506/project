@@ -1,138 +1,91 @@
-.Body {
+.hs-body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f0f4f8;
   color: #333;
-  animation: bodyFadeIn 2s ease-in-out;
+  animation: hs-bodyFadeIn 2s ease-in-out;
 }
 
-@keyframes bodyFadeIn {
+@keyframes hs-bodyFadeIn {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
 }
 
-nav {
-  background: #005f73;
-  padding: 1rem;
-  display: right;
-  justify-content: space-around;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  animation: slideDown 1s ease-in-out;
-}
-
-nav a {
-  margin: 20px;
-}
-
-@keyframes slideDown {
-  from {
-    transform: translateY(-100%);
-  }
-
-  to {
-    transform: translateY(0);
-  }
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  text-align: center;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.log-in{
-  text-align: right;
-  margin-left: 750px;
-  background-color: #2c3e50;
-  border-radius: 10px;
-  padding:8px;
-}
-
-nav a:hover {
-  color: #ffd166;
-  transform: scale(1.1);
-}
-
-header {
+.hs-header {
   background: linear-gradient(120deg, #00b4d8, #0077b6);
   padding: 40px;
   color: white;
   text-align: center;
-  animation: fadeIn 1s ease-in;
+  animation: hs-fadeIn 1s ease-in;
 }
 
-@keyframes fadeIn {
+@keyframes hs-fadeIn {
   from {
     opacity: 0;
     transform: translateY(-20px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-nav img {
-  height: 20px;
-  width: 50px;
-}
-
-section {
+.hs-main-content {
   padding: 2rem;
   max-width: 1200px;
   margin: auto;
   background: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  animation: fadeUp 1s ease-in-out;
+  animation: hs-fadeUp 1s ease-in-out;
   margin-top: 2rem;
 }
 
-@keyframes fadeUp {
+@keyframes hs-fadeUp {
   from {
     opacity: 0;
     transform: translateY(30px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-h1,
-h2 {
-  color: #0077b6;
-  animation: fadeInText 1s ease-in-out;
+.hs-career-paths {
+  padding: 40px;
+  background-color: #f9f9f9;
+  text-align: center;
 }
 
-@keyframes fadeInText {
+.hs-subheading,
+.hs-career-paths h2 {
+  color: #0077b6;
+  animation: hs-fadeInText 1s ease-in-out;
+}
+
+@keyframes hs-fadeInText {
   from {
     opacity: 0;
     letter-spacing: -2px;
   }
-
   to {
     opacity: 1;
     letter-spacing: normal;
   }
 }
 
-.career-paths {
-  padding: 40px;
-  background-color: #f9f9f9;
+.hs-description {
   text-align: center;
+  font-size: 16px;
+  margin-top: 10px;
 }
 
-.card-container {
+.hs-card-container {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -140,92 +93,51 @@ h2 {
   margin-top: 20px;
 }
 
-.card {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  width: 280px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  background-color: skyblue;
-}
-
-.card h3 {
-  color: #2c3e50;
-  margin-bottom: 10px;
-}
-
-.card p {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 15px;
-}
-
-.card a {
-  text-decoration: none;
-  color: #0077cc;
-  font-weight: bold;
-}
-
-.card a:hover {
-  text-decoration: underline;
-}
-
-.card {
+.hs-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  min-height: 280px; 
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  justify-content: space-between;
   background-color: #ffffff;
   border: 1px solid #ccc;
   border-radius: 10px;
   width: 260px;
   padding: 20px;
+  min-height: 280px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
   text-align: center;
 }
 
-
-
-.card-container {
-  text-align: center;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+.hs-card:hover {
+  transform: translateY(-8px);
+  background-color: skyblue;
 }
 
-
-.card a {
-  margin-top: auto; 
-  align-self: center; 
-  text-decoration: none;
-  color: #0fdbf6;
-  font-weight: bold;
-  text-align: center;
-
+.hs-card h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
 }
 
-.card a:hover {
-  color: #33e413;
-  text-decoration: underline;
+.hs-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
 }
 
-.card a {
+.hs-card a {
   display: inline-block;
+  margin-top: auto;
+  align-self: center;
   padding: 8px 12px;
   background-color: #0077cc;
   color: white;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
+.hs-card a:hover {
+  color: #33e413;
+  text-decoration: underline;
+}
