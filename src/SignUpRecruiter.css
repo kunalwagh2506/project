@@ -1,0 +1,108 @@
+/* 🔲 Full page background with blur overlay */
+.recruiter-signup-body {
+  height: 100vh;
+  width: 100%;
+  background-image: url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1470&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.recruiter-signup-body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+/* 📦 Form container */
+.recruiter-signup-box {
+  position: relative;
+  z-index: 2;
+  width: 400px;
+  padding: 45px 35px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: 0.4s ease-in-out;
+}
+
+.recruiter-signup-box:hover {
+  transform: scale(1.02);
+}
+
+/* 🔤 Heading */
+.recruiter-signup-box h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 🔠 Label + Input */
+.recruiter-signup-box label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: 500;
+  font-size: 15px;
+  color: #f0f0f0;
+}
+
+.recruiter-signup-box input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 14px;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.recruiter-signup-box input:focus {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.recruiter-signup-box input::placeholder {
+  color: #ccc;
+}
+
+/* 🌈 Button */
+.recruiter-signup-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #00dbde, #fc00ff);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(255, 0, 255, 0.3);
+}
+
+.recruiter-signup-btn:hover {
+  background: linear-gradient(135deg, #fc466b, #3f5efb);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 255, 255, 0.4);
+}

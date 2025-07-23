@@ -1,8 +1,13 @@
 /* Lecture.css */
 
+<<<<<<< HEAD
 .lectureBody {
   padding: 20px;
   background-color: #fefefe;
+=======
+.lecture-body {
+  margin: 0;
+>>>>>>> a500392 (Updated code)
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #222;
 }

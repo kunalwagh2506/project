@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Body Styling */
 .ind-body {
   margin: 0;
@@ -176,4 +177,90 @@
 
 .ind-card a:hover {
   background-color: #005fa3;
+=======
+.industry-body {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #e0f7fa, #f1f8e9);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 40px 20px;
+}
+
+.industry-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.industry-header h1 {
+  font-size: 2.8rem;
+  color: #00796b;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.industry-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.industry-fields {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.industry-fields h2 {
+  font-size: 2rem;
+  color: #00695c;
+  margin-bottom: 10px;
+}
+
+.industry-fields p {
+  font-size: 1.1rem;
+  color: #455a64;
+}
+
+.industry-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.industry-card {
+  background: #ffffff;
+  border-left: 5px solid #26a69a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.industry-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 150, 136, 0.2);
+}
+
+.industry-card h3 {
+  color: #00796b;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.industry-card p {
+  font-size: 0.95rem;
+  color: #37474f;
+  margin-bottom: 15px;
+}
+
+.industry-card a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #00796b;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.industry-card a:hover {
+  background-color: #004d40;
+>>>>>>> a500392 (Updated code)
 }

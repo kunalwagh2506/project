@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 .hs-body {
+=======
+.home-student-container {
+>>>>>>> a500392 (Updated code)
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f0f4f8;
   color: #333;
+<<<<<<< HEAD
   animation: hs-bodyFadeIn 2s ease-in-out;
 }
 
@@ -16,14 +21,32 @@
 }
 
 .hs-header {
+=======
+  animation: fadeInBody 2s ease-in-out;
+}
+
+@keyframes fadeInBody {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.home-student-header {
+>>>>>>> a500392 (Updated code)
   background: linear-gradient(120deg, #00b4d8, #0077b6);
   padding: 40px;
   color: white;
   text-align: center;
+<<<<<<< HEAD
   animation: hs-fadeIn 1s ease-in;
 }
 
 @keyframes hs-fadeIn {
+=======
+  animation: fadeInTop 1s ease-in;
+}
+
+@keyframes fadeInTop {
+>>>>>>> a500392 (Updated code)
   from {
     opacity: 0;
     transform: translateY(-20px);
@@ -34,18 +57,29 @@
   }
 }
 
+<<<<<<< HEAD
 .hs-main-content {
+=======
+.home-student-content {
+>>>>>>> a500392 (Updated code)
   padding: 2rem;
   max-width: 1200px;
-  margin: auto;
+  margin: 2rem auto;
   background: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+<<<<<<< HEAD
   animation: hs-fadeUp 1s ease-in-out;
   margin-top: 2rem;
 }
 
 @keyframes hs-fadeUp {
+=======
+  animation: fadeInContent 1s ease-in-out;
+}
+
+@keyframes fadeInContent {
+>>>>>>> a500392 (Updated code)
   from {
     opacity: 0;
     transform: translateY(30px);
@@ -56,10 +90,17 @@
   }
 }
 
+<<<<<<< HEAD
 .hs-career-paths {
   padding: 40px;
   background-color: #f9f9f9;
   text-align: center;
+=======
+.home-student-header h1,
+.home-student-content h2 {
+  color: #0077b6;
+  animation: fadeInText 1s ease-in-out;
+>>>>>>> a500392 (Updated code)
 }
 
 .hs-subheading,
@@ -71,7 +112,7 @@
 @keyframes hs-fadeInText {
   from {
     opacity: 0;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
   }
   to {
     opacity: 1;
@@ -79,13 +120,23 @@
   }
 }
 
+<<<<<<< HEAD
 .hs-description {
+=======
+.home-student-paths {
+  padding: 40px 0;
+  background-color: #f9f9f9;
+>>>>>>> a500392 (Updated code)
   text-align: center;
   font-size: 16px;
   margin-top: 10px;
 }
 
+<<<<<<< HEAD
 .hs-card-container {
+=======
+.home-student-card-group {
+>>>>>>> a500392 (Updated code)
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -93,7 +144,11 @@
   margin-top: 20px;
 }
 
+<<<<<<< HEAD
 .hs-card {
+=======
+.home-student-card {
+>>>>>>> a500392 (Updated code)
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -102,29 +157,50 @@
   border-radius: 10px;
   width: 260px;
   padding: 20px;
+<<<<<<< HEAD
   min-height: 280px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+=======
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+>>>>>>> a500392 (Updated code)
   transition: transform 0.3s ease;
   text-align: center;
 }
 
+<<<<<<< HEAD
 .hs-card:hover {
   transform: translateY(-8px);
   background-color: skyblue;
 }
 
 .hs-card h3 {
+=======
+.home-student-card:hover {
+  transform: translateY(-8px);
+  background-color: #caf0f8;
+}
+
+.home-student-card h3 {
+>>>>>>> a500392 (Updated code)
   color: #2c3e50;
   margin-bottom: 10px;
 }
 
+<<<<<<< HEAD
 .hs-card p {
+=======
+.home-student-card p {
+>>>>>>> a500392 (Updated code)
   font-size: 14px;
   color: #555;
   margin-bottom: 15px;
 }
 
+<<<<<<< HEAD
 .hs-card a {
+=======
+.home-student-card a {
+>>>>>>> a500392 (Updated code)
   display: inline-block;
   margin-top: auto;
   align-self: center;
@@ -134,6 +210,7 @@
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
+<<<<<<< HEAD
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -141,3 +218,27 @@
   color: #33e413;
   text-decoration: underline;
 }
+=======
+  margin-top: auto;
+  align-self: center;
+  transition: background-color 0.3s;
+}
+
+.home-student-card a:hover {
+  background-color: #33e413;
+  text-decoration: underline;
+}
+
+.home-student-subheading {
+  margin-top: 30px;
+  color: #0077b6;
+}
+
+.home-student-desc {
+  font-size: 16px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #444;
+}
+>>>>>>> a500392 (Updated code)

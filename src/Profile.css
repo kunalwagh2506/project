@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .prof-body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -115,3 +116,36 @@ h1, h2 {
         letter-spacing: normal;
     }
 }
+=======
+.profile-body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #fff);
+  padding: 30px;
+  max-width: 700px;
+  margin: 40px auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.profile-body header h1 {
+  text-align: center;
+  color: #00796b;
+  margin-bottom: 25px;
+}
+
+.profile-body h2 {
+  color: #004d40;
+  margin-bottom: 15px;
+}
+
+.profile-body p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+#profilePhoto {
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #00796b;
+}
+>>>>>>> a500392 (Updated code)

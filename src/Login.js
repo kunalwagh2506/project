@@ -1,35 +1,62 @@
-import React from 'react'
-import './Login.css'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import './Login.css';
+import { Link, useNavigate } from 'react-router-dom';
 
-export const Login = () => {
-    return (
-        <>
-            <div class="Bbody">
-                <div class="back-img">
-                    <div class="login-box">
-                        <h2>Login Page</h2>
-                        <form>
-                            <label for="userid">User Id:</label>
-                            <input type="text" id="userid" name="userid" required />
+export const Login = ({ setIsLoggedIn }) => {
+  const [userid, setUserid] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
-                            <label for="password">Password:</label>
-                            <input type="password" id="password" name="password" required />
+  const users = [
+    { userid: "1234", password: "4321", role: "recruiter" },
+    { userid: "4321", password: "1234", role: "seeker" },
+  ];
 
-                            <button type="submit"><a href="http://127.0.0.1:5500/HomeStudent.html">Login</a></button>
-                        </form>
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const user = users.find(u => u.userid === userid && u.password === password);
+    if (user) {
+      alert("Login Successful!");
+      setIsLoggedIn(true); // set login status
+      localStorage.setItem("isLoggedIn", "true");
+      localStorage.setItem("role", user.role);
+      if (user.role === "recruiter") {
+        navigate("/HomeStudent");
+      } else {
+        navigate("/seekerdashboard");
+      }
+    } else {
+      alert("Invalid credentials.");
+    }
+  };
 
-                        <div class="signup-options">
-                            <div class="option">
-                                <Link to="/studentsignup">Sign up as Job Recruter</Link>
-                            </div>
-                            <div class="option">
-                                <Link to="/studentsignup">Sign up as Job Seeker</Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </>
-    )
-}
+  return (
+    <div className="Bbody">
+      <div className="login-card swipe-in">
+        <div className="top-right-links">
+          <Link to="/SignUpRecruiter" className="top-btn">Recruiter</Link>
+          <Link to="/SeekerSignup" className="top-btn">Seeker</Link>
+        </div>
+
+        <div className="left-half">
+          <h2>Login</h2>
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="userid">User ID</label>
+            <input type="text" id="userid" value={userid} onChange={(e) => setUserid(e.target.value)} />
+
+            <label htmlFor="password">Password</label>
+            <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+
+            <button type="submit" className="login-button">Login</button>
+          </form>
+        </div>
+
+        <div className="right-half">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80" alt="Login" />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Login;

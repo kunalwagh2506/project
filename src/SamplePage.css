@@ -123,7 +123,7 @@ h1 {
   color: #ffffff;
   margin-bottom: 15px;
   font-size: 20px;
-  border-bottom: 2px solid #00b4d8;
+   border-bottom: 2px solid #00b4d8;
   display: inline-block;
   padding-bottom: 5px;
 }
@@ -270,7 +270,7 @@ h1 {
 }
 
 
-.Body {
+.sample-body{
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   /* Background image */
@@ -319,3 +319,97 @@ h1 {
     background-position: top center;
   }
 }
+.social-icons {
+  display: flex;
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+  margin-top: 12px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #ffffff10;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.15);
+  background-color: #00b4d8;
+  color: #fff;
+}
+
+.facebook:hover {
+  background-color: #3b5998;
+}
+
+.linkedin:hover {
+  background-color: #0077b5;
+}
+
+.twitter:hover {
+  background-color: #1da1f2;
+}
+
+.instagram:hover {
+  background-color: #e1306c;
+}
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ffffff10;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  background-color: #00b4d8;
+}
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ffffff10;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icon img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  background-color: #00b4d8;
+}
+

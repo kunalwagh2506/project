@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .ns-body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -22,6 +23,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+=======
+
+.student-navbar {
+  background: #005f73;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+>>>>>>> a500392 (Updated code)
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   animation: ns-slideDown 1s ease-in-out;
   flex-wrap: wrap;
@@ -30,6 +39,7 @@
   z-index: 1000;
 }
 
+<<<<<<< HEAD
 /* Navbar slide animation */
 @keyframes ns-slideDown {
   from {
@@ -43,10 +53,19 @@
 /* Navbar links */
 .ns-link {
   margin: 10px 15px;
+=======
+.navbar-logo {
+  height: 20px;
+  width: 50px;
+}
+
+.navbar-link {
+>>>>>>> a500392 (Updated code)
   color: #fff;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease, transform 0.3s ease;
+<<<<<<< HEAD
   text-align: center;
 }
 
@@ -96,3 +115,12 @@
     width: fit-content;
   }
 }
+=======
+  margin: 20px;
+}
+
+.navbar-link:hover {
+  color: #ffd166;
+  transform: scale(1.1);
+}
+>>>>>>> a500392 (Updated code)

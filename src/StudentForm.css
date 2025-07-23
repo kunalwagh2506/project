@@ -1,183 +1,288 @@
-.student-body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #74ebd5, #9face6);
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
   min-height: 100vh;
-  padding: 2vh 4vw;
+}
+
+/* Layout */
+.student-layout {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 100vh;
 }
 
-/* ===== Responsive Form Container ===== */
-.student-form-container {
+/* Sidebar */
+.student-sidebar {
+  width: 250px;
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: 20px;
-  padding: 4vh 4vw;
-  width: 100%;
-  max-width: 520px;
-  height: auto;
-  max-height: 95vh;
-  overflow-y: auto;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem 1rem;
   color: #fff;
-  animation: fadeInUp 0.8s ease;
-
-  /* ✨ Hide Scrollbar Cross-Browser */
-  -ms-overflow-style: none;       /* IE & Edge */
-  scrollbar-width: none;          /* Firefox */
-}
-.student-form-container::-webkit-scrollbar {
-  display: none;                  /* Chrome, Safari, Opera */
 }
 
-.student-form-title {
-  text-align: center;
-  margin-bottom: 20px;
+.student-sidebar h2 {
   font-size: 1.8rem;
+  margin-bottom: 2rem;
   color: #fff;
+  text-align: center;
 }
 
-/* ===== Form Elements ===== */
-.student-label {
+.student-sidebar ul {
+  list-style: none;
+}
+
+.student-sidebar ul li {
+  margin: 1rem 0;
+}
+
+.student-sidebar button {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.student-sidebar button:hover {
+  background: #fff;
+  color: #333;
+}
+
+/* Main Content */
+.student-main-form {
+  flex: 1;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  overflow-y: auto;
+}
+
+.form-section {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease;
+}
+
+.form-section h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
   display: block;
-  margin-top: 15px;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
   font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-weight: 500;
 }
 
-.student-input,
-.student-textarea {
-  width: 100%;
-  padding: 12px;
-  margin-top: 6px;
-  background: rgba(255, 255, 255, 0.2);
-  border: 2px solid transparent;
-  border-radius: 10px;
+/* Submit Button */
+.submit-btn {
+  padding: 0.9rem 2rem;
+  background: #007bff;
   color: #fff;
-  font-size: 1rem;
-  transition: 0.3s;
-}
-
-.student-input:focus,
-.student-textarea:focus {
-  border-color: #00f2fe;
-  background: rgba(255, 255, 255, 0.25);
-  outline: none;
-  box-shadow: 0 0 10px rgba(0, 242, 254, 0.6);
-}
-
-/* ===== Date of Birth Layout ===== */
-.student-dob-group {
-  display: flex;
-  gap: 10px;
-  margin-top: 6px;
-}
-.student-dob-group .student-input {
-  flex: 1;
-}
-
-/* ===== Radio & Checkbox Groups ===== */
-.student-education,
-.student-skills {
-  margin-top: 10px;
-}
-.student-education label,
-.student-skills label {
-  display: block;
-  margin-top: 8px;
-  cursor: pointer;
-  font-weight: 400;
-  font-size: 0.95rem;
-}
-.student-radio,
-.student-checkbox {
-  accent-color: #00f2fe;
-  margin-right: 8px;
-}
-
-/* ===== Submit Button ===== */
-.student-submit-btn {
-  width: 100%;
-  padding: 14px;
-  margin-top: 25px;
   border: none;
   border-radius: 12px;
-  background: linear-gradient(to right, #4facfe, #00f2fe);
-  color: #fff;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.3s ease;
-}
-.student-submit-btn:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 20px rgba(0, 242, 254, 0.5);
+  transition: background 0.3s;
 }
 
-/* ===== Link Styling ===== */
-.student-link {
-  display: block;
-  text-align: center;
-  margin-top: 20px;
-  text-decoration: none;
-  color: #eafaff;
-  font-weight: 500;
-}
-.student-link:hover {
-  text-decoration: underline;
+.submit-btn:hover {
+  background: #0056b3;
 }
 
-/* ===== Animation ===== */
-@keyframes fadeInUp {
-  0% {
+/* Animation */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(15px);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* ===== Media Queries for Smaller Screens ===== */
-@media (max-width: 768px) {
-  .student-form-container {
-    padding: 5vh 5vw;
-    max-height: 100vh;
-  }
-
-  .student-form-title {
-    font-size: 1.6rem;
-  }
-
-  .student-label,
-  .student-input,
-  .student-textarea {
-    font-size: 1rem;
-  }
-
-  .student-dob-group {
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .student-layout {
     flex-direction: column;
+  }
+
+  .student-sidebar {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .student-sidebar ul {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+  }
+
+  .student-main-form {
+    padding: 1rem;
+  }
+}
+/* Skills Section */
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+  padding: 2rem;
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #222;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  letter-spacing: 0.5px;
+}
+
+.checkbox-group label:hover {
+  background-color: #e0f7fa;
+  border-color: #00bcd4;
+  transform: translateY(-3px);
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 12px;
+  transform: scale(1.3);
+  accent-color: #00bcd4;
+}
+.submit-btn {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: #fff;
+  padding: 0.95rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(122, 100, 255, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.submit-btn::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2), transparent 70%);
+  animation: shine 3s linear infinite;
+  z-index: 0;
+}
+
+@keyframes shine {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 
-@media (max-width: 480px) {
-  .student-body {
-    padding: 10px;
-  }
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(122, 100, 255, 0.5);
+}
 
-  .student-form-container {
-    padding: 20px;
-    border-radius: 15px;
-  }
+.submit-btn:active {
+  transform: scale(0.97);
+  box-shadow: 0 4px 12px rgba(122, 100, 255, 0.3);
+}
+.nav-btn {
+  padding: 10px 20px;
+  margin: 10px 8px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 200, 255, 0.3);
+}
 
-  .student-submit-btn {
-    font-size: 0.95rem;
-  }
-
-  .student-link {
-    font-size: 0.9rem;
-  }
+.nav-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  box-shadow: 0 6px 20px rgba(0, 255, 255, 0.4);
 }

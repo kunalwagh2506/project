@@ -1,14 +1,25 @@
+<<<<<<< HEAD
 import React from 'react';
 import './Lecture.css';
 import { NavbarStudent } from './NavbarStudent';
+=======
+import React from 'react'
+import './Lecture.css';
+>>>>>>> a500392 (Updated code)
 
 export const Lecture = () => {
     return (
         <>
+<<<<<<< HEAD
             <NavbarStudent />
             <section className="lectureBody">
                 <header className="lectureHeader">
                     <h1>✨Lectures✨</h1>
+=======
+            <section class="lecture-body">
+                <header>
+                    <h1>✨Lectures After 10th✨</h1>
+>>>>>>> a500392 (Updated code)
                 </header>
                 <section>
                     {/* After 10th */}

@@ -1,13 +1,24 @@
+<<<<<<< HEAD
 import React from 'react';
 import './Industry.css';
 import { NavbarStudent } from './NavbarStudent';
+=======
+import React from 'react'
+import './Industry.css'
+>>>>>>> a500392 (Updated code)
 
 export const Industry = () => {
     return (
         <>
+<<<<<<< HEAD
             <NavbarStudent />
             <section className="ind-body">
                 <header className="ind-header">
+=======
+            <section class="industry-body">
+               
+                <header>
+>>>>>>> a500392 (Updated code)
                     <h1>Industry Exposure</h1>
                 </header>
 

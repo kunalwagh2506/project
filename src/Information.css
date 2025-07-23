@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Body Styling */
 .info-body {
   padding: 20px;
@@ -152,3 +153,79 @@
     width: 100%;
   }
 }
+=======
+/* InformationUpdated.css */
+
+.info-body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f4f6;
+  color: #333;
+  padding: 2rem;
+}
+
+.info-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.info-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.info-streams h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #34495e;
+}
+
+.info-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.info-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.info-card h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #1e90ff;
+}
+
+.info-card p {
+  margin: 0.5rem 0 1rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.info-card a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.info-card a:hover {
+  color: #0056b3;
+}
+>>>>>>> a500392 (Updated code)

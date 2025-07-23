@@ -1,100 +1,203 @@
 .Bbody {
-  font-family: Arial, sans-serif;
-  background-image: url(./loginbackground.jpg);
+  height: 100vh;
+  width: 100%;
+  background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80');
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+/* Optional: dark overlay for readability */
+.Bbody::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* black tint */
+  z-index: 1;
+}
+
+/* Make sure card is above overlay */
+/* 🧊 Login Card Glass Effect */
+.login-card {
+   position: relative;
+  z-index: 2;
+  width: 750px;
+  height: 450px;
+  display: flex;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(18px);
+  border-radius: 20px;
   overflow: hidden;
-  height: 100vh;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  position: relative;
+  color: white;
 }
 
-.back-img {
-  background-image: url(./loginbackground.jpg);
-}
-
-/* .login-box {
-  
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  border-radius: 100px;
-  text-align: center;
-} */
-
-.login-box {
-  padding: 30px;
-  text-align: center;
-
-  /* Transparent background with blur */
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
-  /* Optional subtle border */
-  border: 1px solid rgba(255, 255, 255, 0.3);
-
-  /* Keep your existing shadow */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-  /* Width */
-  width: 300px;
-}
-
-
-a {
-  text-decoration: none;
-}
-
-.login-box h2 {
-  margin-bottom: 20px;
-  font-size: 30px;
-  text-align: center;
-}
-
-form {
+/* ⬆ Top-right vertical links */
+.top-right-links {
+  position: absolute;
+  top: 20px;
+  right: 20px;
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
-form label {
-  text-align: left;
-  margin: 8px 0 4px;
-}
-
-form input {
-  padding: 8px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button {
-  padding: 10px;
-  background-color: #007bff;
+.top-btn {
+  padding: 8px 14px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
   color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-.signup-options {
-  margin-top: 20px;
-}
-
-.signup-options .option {
-  margin: 10px 0;
-}
-
-.signup-options a {
   text-decoration: none;
-  color: #007bff;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  transition: background 0.3s;
 }
 
-.signup-options a:hover {
-  text-decoration: underline;
+.top-btn:hover {
+  background-color: rgba(0, 255, 200, 0.4);
 }
+
+/* Left half - Form */
+.left-half {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left-half h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.left-half label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.left-half input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.left-half input::placeholder {
+  color: #ddd;
+}
+
+.login-button {
+  padding: 12px;
+  background-color: #00bfa6;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-button:hover {
+  background-color: #009b89;
+}
+
+/* Right Half - Info */
+.right-half {
+  width: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.right-half h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.right-half p {
+  color: #ccc;
+}
+
+/* Swipe animation */
+.swipe-in {
+  animation: swipeIn 0.8s ease forwards;
+}
+
+@keyframes swipeIn {
+  from {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .login-card {
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+  }
+
+  .left-half,
+  .right-half {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .top-right-links {
+    top: 10px;
+    right: 10px;
+  }
+}
+/* Right-half image */
+/* Top buttons container */
+.top-right-links {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 10;
+}
+
+/* Glowing animated buttons */
+.top-btn {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff); /* Blue gradient */
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+  transition: all 0.3s ease-in-out;
+  border: none;
+  text-align: center;
+}
+
+/* Hover glow effect */
+.top-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 255, 255, 0.6);
+  background: linear-gradient(135deg, #33f2ff, #0072ff);
+}
+
+
